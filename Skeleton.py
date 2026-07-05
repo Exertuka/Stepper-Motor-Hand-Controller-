@@ -45,7 +45,7 @@ holistic = mp_holistic.Holistic(
     min_tracking_confidence=0.5
 )
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 print("Starting camera... Press 'q' to quit.")
 
