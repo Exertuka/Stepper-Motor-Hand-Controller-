@@ -5,7 +5,7 @@ import mediapipe as mp
 from ultralytics import YOLO
 
 # --- ARDUINO CONNECTION ---
-SERIAL_PORT = '/dev/cu.usbserial-120'
+SERIAL_PORT = '/dev/cu.usbserial-110'
 
 try:
     arduino = serial.Serial(SERIAL_PORT, 115200, timeout=0.01)
@@ -45,7 +45,7 @@ holistic = mp_holistic.Holistic(
     min_tracking_confidence=0.5
 )
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("http://169.254.242.174:4747/video")
 
 print("Starting camera... Press 'q' to quit.")
 
